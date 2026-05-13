@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaTuPerro - Adiestramiento Canino Profesional</title>
+    <link rel="icon" type="image/jpeg" href="img/Logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.8s ease-in-out; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- NAVBAR -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="img/Logo.jpeg" alt="Logo EducaTuPerro" class="h-11 w-11 rounded-full object-cover">
+                    <span class="ml-3 text-lg sm:text-xl font-bold text-blue-700">EducaTuPerro</span>
+                </div>
+                <div class="hidden lg:flex items-center gap-7 text-sm xl:text-base">
+                    <a href="#hero" class="text-gray-700 hover:text-orange-500">Inicio</a>
+                    <a href="#about" class="text-gray-700 hover:text-orange-500">Sobre Nosotros</a>
+                    <a href="#methodology" class="text-gray-700 hover:text-orange-500">Metodología</a>
+                    <a href="#services" class="text-gray-700 hover:text-orange-500">Servicios</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-orange-500">Galería</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-orange-500">Testimonios</a>
+                    <a href="#contact" class="text-gray-700 hover:text-orange-500">Contacto</a>
+                </div>
+                <button class="lg:hidden text-gray-700 text-2xl leading-none" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+            </div>
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 space-y-1 rounded-lg border border-gray-200 p-3">
+                <a href="#hero" class="block text-gray-700 hover:text-orange-500 py-2">Inicio</a>
+                <a href="#about" class="block text-gray-700 hover:text-orange-500 py-2">Sobre Nosotros</a>
+                <a href="#methodology" class="block text-gray-700 hover:text-orange-500 py-2">Metodología</a>
+                <a href="#services" class="block text-gray-700 hover:text-orange-500 py-2">Servicios</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-orange-500 py-2">Galería</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-orange-500 py-2">Testimonios</a>
+                <a href="#contact" class="block text-gray-700 hover:text-orange-500 py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO CARRUSEL FULL WIDTH -->
+    <section id="hero" class="relative h-screen min-h-[680px] w-full overflow-hidden pt-20">
+        <img id="heroCarouselImg" src="https://images.unsplash.com/photo-1633587376982-a9c3d1f4ce65?q=80&w=1600&auto=format&fit=crop" alt="Perro entrenando" class="absolute inset-0 h-full w-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/30"></div>
+        <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+            <div class="max-w-3xl animate-slide-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 text-white">Transformamos la vida de tu perro y la tuya</h1>
+                <p class="text-lg sm:text-xl mb-8 text-blue-50">Más de 20 años de experiencia fortaleciendo el vínculo entre humanos y caninos mediante adiestramiento profesional y humano.</p>
+                <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-7 md:px-9 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition transform hover:scale-105">Agenda una evaluación gratuita</a>
+            </div>
+        </div>
+        <button onclick="prevImage()" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 bg-black/40 text-white px-4 py-3 rounded-full hover:bg-black/65 transition" aria-label="Imagen anterior">❮</button>
+        <button onclick="nextImage()" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 bg-black/40 text-white px-4 py-3 rounded-full hover:bg-black/65 transition" aria-label="Imagen siguiente">❯</button>
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+            <span id="carouselIndex" class="text-sm text-white bg-black/40 px-3 py-1 rounded-full">1 / 10</span>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="about" class="py-14 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Sobre Nosotros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <article class="bg-blue-50 p-5 md:p-7 rounded-xl transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <img src="img/Img01.jpeg" alt="Entrenamiento profesional canino" class="w-full h-56 sm:h-64 object-cover rounded-lg mb-5">
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Historia y Experiencia</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">Contamos con una trayectoria de más de dos décadas dedicada a la psicología canina. Nuestro enfoque combina la experiencia técnica en guardia y protección con la sensibilidad necesaria para la convivencia familiar. Nos apasiona entender cómo los perros interactúan con su entorno.</p>
+                </article>
+                <article class="bg-orange-50 p-5 md:p-7 rounded-xl transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <img src="img/Img02.jpeg" alt="Trabajo de adiestramiento con cliente" class="w-full h-56 md:h-56 object-cover object-center rounded-lg mb-5">
+                    <h3 class="text-xl md:text-2xl font-bold text-orange-600 mb-3">Nuestro Compromiso</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">Entendemos que cada perro es único. Por ello, nuestro equipo evalúa individualmente la raza, temperamento y entorno del hogar. No solo entrenamos perros; educamos dueños para lograr una armonía duradera en el hogar.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGÍA -->
+    <section id="methodology" class="py-14 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Nuestra Metodología</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <article class="border-l-4 border-orange-500 rounded-r-xl p-5 bg-orange-50/60 hover:shadow-xl hover:-translate-y-1 transition">
+                    <img src="img/Img09.jpeg" alt="Comunicación entre dueño y perro" class="w-full h-56 md:h-56 object-cover object-center rounded-lg mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-orange-600 mb-3">Comunicación, no sumisión</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">Nuestra filosofía se basa en el respeto y la comprensión. Utilizamos técnicas de refuerzo positivo para crear una conexión emocional sólida. Creemos que un perro debe obedecer por respeto y vínculo.</p>
+                </article>
+                <article class="border-l-4 border-green-500 rounded-r-xl p-5 bg-green-50/60 hover:shadow-xl hover:-translate-y-1 transition">
+                    <img src="img/Img10.jpeg" alt="Entrenamiento de dueños con perro" class="w-full h-56 md:h-56 object-cover object-center rounded-lg mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-green-600 mb-3">Entrenamiento Humano</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">No entrenamos solo al perro; educamos a los dueños. Proporcionamos herramientas y técnicas para mantener lo aprendido en la rutina diaria del hogar.</p>
+                </article>
+                <article class="border-l-4 border-blue-500 rounded-r-xl p-5 bg-blue-50/60 hover:shadow-xl hover:-translate-y-1 transition">
+                    <img src="img/Img11.jpeg" alt="Evaluación de psicología canina" class="w-full h-56 md:h-56 object-cover object-center rounded-lg mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Psicología Canina</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">Entendemos el lenguaje corporal, instintos y necesidades emocionales de cada raza y tipo de perro para adaptar nuestra metodología.</p>
+                </article>
+                <article class="border-l-4 border-purple-500 rounded-r-xl p-5 bg-purple-50/60 hover:shadow-xl hover:-translate-y-1 transition">
+                    <img src="img/Img12.jpeg" alt="Resultados de adiestramiento canino" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4" style="object-position: center 35%;">
+                    <h3 class="text-xl md:text-2xl font-bold text-purple-600 mb-3">Resultados Duraderos</h3>
+                    <p class="text-gray-700 leading-relaxed text-base md:text-lg">Nuestro objetivo es crear cambios comportamentales permanentes que mejoren la calidad de vida tanto del perro como de su familia.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="services" class="py-14 md:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img03.jpeg" alt="Servicio obediencia básica" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Obediencia Básica</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Curso de 6 semanas. Tu perro aprenderá comandos fundamentales: sentado, echado, quieto y acudir al llamado.</p>
+                        <p class="text-sm text-orange-600 font-semibold">A Domicilio</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img04.jpeg" alt="Servicio obediencia avanzada" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Obediencia Avanzada</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Curso de 5 semanas. Control total del perro sin correa bajo situaciones de alta distracción.</p>
+                        <p class="text-sm text-orange-600 font-semibold">Libertad y Seguridad</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img05.jpeg" alt="Servicio educación para cachorros" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Educación para Cachorros</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Establecer hábitos correctos desde los primeros meses incluyendo socialización temprana.</p>
+                        <p class="text-sm text-orange-600 font-semibold">Prevención</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img06.jpeg" alt="Servicio guardia y protección" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Guardia y Protección</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Entrenamiento especializado para protección personal, familiar o empresarial.</p>
+                        <p class="text-sm text-orange-600 font-semibold">Especializado</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img07.jpeg" alt="Servicio modificación de conducta" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Modificación de Conducta</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Tratamos ansiedad, agresividad, miedos fóbicos, ladridos excesivos y destrucción.</p>
+                        <p class="text-sm text-orange-600 font-semibold">Soluciones</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
+                    <img src="img/Img08.jpeg" alt="Servicio asesoramiento personalizado" class="w-full h-56 md:h-56 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Asesoramiento Personalizado</h3>
+                        <p class="text-gray-600 mb-4 text-base md:text-lg">Evaluación individual de cada perro y programa adaptado a sus necesidades.</p>
+                        <p class="text-sm text-orange-600 font-semibold">Custom</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE TRABAJO -->
+    <section id="gallery" class="py-14 md:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center text-blue-700">Galería de Trabajo</h2>
+            <p class="text-center text-gray-600 text-base md:text-lg mb-8 md:mb-12">Imágenes y videos reales del trabajo de adiestramiento con clientes.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-8">
+                <img src="img/Img13.jpeg" alt="Galería trabajo 13" class="w-full h-56 object-cover rounded-xl border-4 border-blue-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img14.jpeg" alt="Galería trabajo 14" class="w-full h-56 object-cover rounded-xl border-4 border-orange-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img15.jpeg" alt="Galería trabajo 15" class="w-full h-56 object-cover rounded-xl border-4 border-blue-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img16.jpeg" alt="Galería trabajo 16" class="w-full h-56 object-cover rounded-xl border-4 border-orange-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img17.jpeg" alt="Galería trabajo 17" class="w-full h-56 object-cover rounded-xl border-4 border-blue-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img18.jpeg" alt="Galería trabajo 18" class="w-full h-56 object-cover rounded-xl border-4 border-orange-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+                <img src="img/Img19.jpeg" alt="Galería trabajo 19" class="w-full h-56 object-cover rounded-xl border-4 border-blue-200 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <video controls preload="metadata" class="w-full h-64 rounded-xl shadow-lg object-cover bg-black">
+                    <source src="img/Vid01.mp4" type="video/mp4">
+                </video>
+                <video controls preload="metadata" class="w-full h-64 rounded-xl shadow-lg object-cover bg-black">
+                    <source src="img/Vid02.mp4" type="video/mp4">
+                </video>
+                <video controls preload="metadata" class="w-full h-64 rounded-xl shadow-lg object-cover bg-black">
+                    <source src="img/Vid03.mp4" type="video/mp4">
+                </video>
+                <video controls preload="metadata" class="w-full h-64 rounded-xl shadow-lg object-cover bg-black">
+                    <source src="img/Vid04.mp4" type="video/mp4">
+                </video>
+                <video controls preload="metadata" class="w-full h-64 rounded-xl shadow-lg object-cover bg-black md:col-span-2 lg:col-span-1">
+                    <source src="img/Vid05.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonials" class="py-14 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Testimonios de Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <article class="bg-gray-50 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1717328056825-0319d8e69cdd?q=80&w=1200&auto=format&fit=crop" alt="Cliente feliz con su perro" class="w-full h-44 object-cover">
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 italic text-base md:text-lg">"Mi perro pasó de ser incontrolable a ser el compañero perfecto. El equipo de EducaTuPerro fue paciente y profesional."</p>
+                        <p class="font-bold text-blue-700">- Cliente Satisfecho</p>
+                    </div>
+                </article>
+                <article class="bg-gray-50 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1588162112301-cb1d36b8628b?q=80&w=1200&auto=format&fit=crop" alt="Familia con perro entrenado" class="w-full h-44 object-cover">
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 italic text-base md:text-lg">"Después del entrenamiento, mi cachorro ahora entiende todos los comandos. Excelente atención personalizada."</p>
+                        <p class="font-bold text-blue-700">- Familia Feliz</p>
+                    </div>
+                </article>
+                <article class="bg-gray-50 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1755516966419-5e480ec7c7e7?q=80&w=1200&auto=format&fit=crop" alt="Perro recibiendo entrenamiento profesional" class="w-full h-44 object-cover">
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 italic text-base md:text-lg">"El mejor servicio que he contratado para mis perros. Profesionales, amables y muy efectivos."</p>
+                        <p class="font-bold text-blue-700">- Dueño Agradecido</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="py-14 md:py-20 bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8">¿Listo para transformar la vida de tu perro?</h2>
+            <p class="text-lg sm:text-xl mb-8 md:mb-12 text-orange-100">Agenda una evaluación gratuita y descubre cómo podemos ayudarte.</p>
+            <div class="mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-4xl">
+                <div class="bg-white text-orange-600 p-6 rounded-lg font-bold text-lg md:text-xl hover:bg-orange-50 transition transform hover:scale-105 shadow-md">
+                    <h4 class="font-bold text-lg mb-2">📞 Teléfono</h4>
+                    <p class="text-base font-medium text-orange-700">+52 (XXX) XXX-XXXX</p>
+                </div>
+                <div class="bg-white text-orange-600 p-6 rounded-lg font-bold text-lg md:text-xl hover:bg-orange-50 transition transform hover:scale-105 shadow-md">
+                    <h4 class="font-bold text-lg mb-2">📍 Ubicación</h4>
+                    <p class="text-base font-medium text-orange-700">Anímate a visitarnos en nuestras instalaciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">EducaTuPerro</h4>
+                    <p class="text-gray-400 text-sm md:text-base">Más de 20 años transformando vidas de perros y familias.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#methodology" class="hover:text-orange-500">Metodología</a></li>
+                        <li><a href="#services" class="hover:text-orange-500">Servicios</a></li>
+                        <li><a href="#gallery" class="hover:text-orange-500">Galería</a></li>
+                        <li><a href="#contact" class="hover:text-orange-500">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Redes Sociales</h4>
+                    <div class="flex flex-wrap gap-4 text-gray-400">
+                        <a href="#" class="hover:text-orange-500">Facebook</a>
+                        <a href="#" class="hover:text-orange-500">Instagram</a>
+                        <a href="#" class="hover:text-orange-500">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 EducaTuPerro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const carouselImages = [
+            { src: "https://images.unsplash.com/photo-1633587376982-a9c3d1f4ce65?q=80&w=1600&auto=format&fit=crop", position: "center 45%" },
+            { src: "https://images.unsplash.com/photo-1685343425149-b4934140a2e9?q=80&w=1600&auto=format&fit=crop", position: "center 52%" },
+            { src: "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?q=80&w=1600&auto=format&fit=crop", position: "center 38%" },
+            { src: "https://images.unsplash.com/photo-1579683571996-f3482b0907c2?q=80&w=1600&auto=format&fit=crop", position: "center 50%" },
+            { src: "https://images.unsplash.com/photo-1618123181860-3dea95f84558?q=80&w=1600&auto=format&fit=crop", position: "center 28%" },
+            { src: "https://plus.unsplash.com/premium_photo-1668882476522-fe008ce0a584?q=80&w=1600&auto=format&fit=crop", position: "center 47%" },
+            { src: "https://images.unsplash.com/photo-1760528543365-2a51c306095a?q=80&w=1600&auto=format&fit=crop", position: "center 20%" },
+            { src: "https://images.unsplash.com/photo-1603013588203-522a0116b3e4?q=80&w=1600&auto=format&fit=crop", position: "center 8%" },
+            { src: "https://images.unsplash.com/photo-1697881885013-9f6267f32aef?q=80&w=1600&auto=format&fit=crop", position: "center 35%" },
+            { src: "https://images.unsplash.com/photo-1648304887391-a6c2cf2228e4?q=80&w=1600&auto=format&fit=crop", position: "center 52%" }
+        ];
+
+        let currentIndex = 0;
+        let autoplayId = null;
+
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
+
+        function updateCarousel() {
+            const img = document.getElementById("heroCarouselImg");
+            const idx = document.getElementById("carouselIndex");
+            img.src = carouselImages[currentIndex].src;
+            img.style.objectPosition = carouselImages[currentIndex].position;
+            idx.textContent = `${currentIndex + 1} / ${carouselImages.length}`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            updateCarousel();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+            updateCarousel();
+        }
+
+        function startAutoplay() {
+            if (autoplayId) clearInterval(autoplayId);
+            autoplayId = setInterval(nextImage, 5000);
+        }
+
+        updateCarousel();
+        startAutoplay();
+    </script>
+</body>
+</html>
