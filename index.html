@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EducaTuPerro - Adiestramiento Canino Profesional</title>
-    <link rel="icon" type="image/jpeg" href="img/Logo.jpeg">
+    <link rel="icon" type="image/png" href="img/Logo-removebg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -66,17 +67,34 @@
     </section>
 
     <!-- SOBRE NOSOTROS -->
-    <section id="about" class="py-14 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="relative overflow-hidden py-14 md:py-20 bg-white">
+        <div class="pointer-events-none absolute inset-0 z-0">
+            <i class="fa-solid fa-paw text-blue-200/50 text-5xl sm:text-6xl absolute left-6 top-8 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-200/50 text-6xl sm:text-7xl absolute right-8 bottom-10 rotate-6"></i>
+            <i class="fa-solid fa-paw text-sky-200/40 text-4xl sm:text-5xl absolute right-24 top-20 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-200/40 text-5xl sm:text-6xl absolute left-20 bottom-16 -rotate-6"></i>
+            <i class="fa-solid fa-paw text-blue-100/50 text-4xl sm:text-5xl absolute left-1/2 top-8 -translate-x-1/2 rotate-6"></i>
+            <i class="fa-solid fa-bone text-sky-100/50 text-5xl sm:text-6xl absolute right-12 top-1/2 -translate-y-1/2 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-blue-100/40 text-4xl sm:text-5xl absolute left-10 bottom-6 rotate-12"></i>
+            <i class="fa-solid fa-bone text-indigo-200/40 text-4xl sm:text-5xl absolute left-12 top-1/2 -translate-y-1/2 rotate-6"></i>
+            <i class="fa-solid fa-paw text-teal-200/40 text-5xl sm:text-6xl absolute right-20 top-28 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute right-1/3 bottom-12 rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-200/30 text-3xl sm:text-4xl absolute left-1/3 top-28 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-green-200/40 text-4xl sm:text-5xl absolute right-10 top-10 rotate-6"></i>
+            <i class="fa-solid fa-paw text-purple-200/40 text-4xl sm:text-5xl absolute left-14 top-1/3 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute left-1/4 bottom-8 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-200/30 text-3xl sm:text-4xl absolute right-1/4 bottom-6 rotate-12"></i>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Sobre Nosotros</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 <article class="bg-blue-50 p-5 md:p-7 rounded-xl transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                    <img src="img/Img02.jpeg" alt="Entrenamiento profesional canino" class="w-full h-56 sm:h-64 object-cover rounded-lg mb-5" style="object-position: center 35%;">
+                    <img src="img/Img02.jpeg" alt="Entrenamiento profesional canino" class="w-full h-56 sm:h-64 md:h-64 object-cover rounded-lg mb-5" style="object-position: center 35%;">
                     <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">Historia y Experiencia</h3>
                     <p class="text-gray-700 leading-relaxed text-base md:text-lg">Contamos con una trayectoria de más de dos décadas dedicada a la psicología canina. Nuestro enfoque combina la experiencia técnica en guardia y protección con la sensibilidad necesaria para la convivencia familiar. Nos apasiona entender cómo los perros interactúan con su entorno.</p>
                 </article>
                 <article class="bg-sky-50 p-5 md:p-7 rounded-xl transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                    <img src="img/Img28.jpeg" alt="Trabajo de adiestramiento con cliente" class="w-full h-56 md:h-56 object-cover object-center rounded-lg mb-5">
+                    <img src="img/Img28.jpeg" alt="Trabajo de adiestramiento con cliente" class="w-full h-56 sm:h-64 md:h-64 object-cover object-center rounded-lg mb-5">
                     <h3 class="text-xl md:text-2xl font-bold text-sky-600 mb-3">Nuestro Compromiso</h3>
                     <p class="text-gray-700 leading-relaxed text-base md:text-lg">Entendemos que cada perro es único. Por ello, nuestro equipo evalúa individualmente la raza, temperamento y entorno del hogar. No solo entrenamos perros; educamos dueños para lograr una armonía duradera en el hogar.</p>
                 </article>
@@ -85,8 +103,25 @@
     </section>
 
     <!-- METODOLOGÍA -->
-    <section id="methodology" class="py-14 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="methodology" class="relative overflow-hidden py-14 md:py-20 bg-white">
+        <div class="pointer-events-none absolute inset-0 z-0">
+            <i class="fa-solid fa-bone text-green-200/50 text-5xl sm:text-6xl absolute left-10 bottom-14 -rotate-6"></i>
+            <i class="fa-solid fa-paw text-blue-200/50 text-6xl sm:text-7xl absolute right-6 top-8 rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-200/40 text-4xl sm:text-5xl absolute left-24 top-12 rotate-6"></i>
+            <i class="fa-solid fa-paw text-purple-200/40 text-5xl sm:text-6xl absolute right-16 bottom-10 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-100/50 text-5xl sm:text-6xl absolute left-1/2 bottom-6 -translate-x-1/2 rotate-12"></i>
+            <i class="fa-solid fa-paw text-green-100/50 text-4xl sm:text-5xl absolute right-10 top-1/2 -translate-y-1/2 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-sky-100/40 text-4xl sm:text-5xl absolute left-12 top-28 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-teal-200/40 text-5xl sm:text-6xl absolute left-1/3 top-10 rotate-6"></i>
+            <i class="fa-solid fa-bone text-indigo-200/40 text-4xl sm:text-5xl absolute right-12 bottom-8 -rotate-6"></i>
+            <i class="fa-solid fa-paw text-blue-200/30 text-3xl sm:text-4xl absolute left-8 bottom-6 rotate-12"></i>
+            <i class="fa-solid fa-bone text-green-200/30 text-3xl sm:text-4xl absolute right-1/3 top-28 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-200/40 text-4xl sm:text-5xl absolute right-10 top-14 rotate-6"></i>
+            <i class="fa-solid fa-bone text-purple-200/40 text-4xl sm:text-5xl absolute left-14 bottom-10 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-teal-200/30 text-3xl sm:text-4xl absolute left-1/4 top-1/2 -translate-y-1/2 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute right-1/4 bottom-6 -rotate-6"></i>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Nuestra Metodología</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <article class="border-l-4 border-sky-500 rounded-r-xl p-5 bg-sky-50/60 hover:shadow-xl hover:-translate-y-1 transition">
@@ -114,8 +149,25 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section id="services" class="py-14 md:py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" class="relative overflow-hidden py-14 md:py-20 bg-gray-50">
+        <div class="pointer-events-none absolute inset-0 z-0">
+            <i class="fa-solid fa-paw text-sky-200/50 text-5xl sm:text-6xl absolute left-8 top-10 rotate-6"></i>
+            <i class="fa-solid fa-bone text-blue-200/50 text-6xl sm:text-7xl absolute right-8 bottom-10 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-blue-200/40 text-4xl sm:text-5xl absolute right-24 top-16 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-sky-200/40 text-5xl sm:text-6xl absolute left-24 bottom-14 rotate-12"></i>
+            <i class="fa-solid fa-paw text-blue-100/50 text-4xl sm:text-5xl absolute left-1/2 top-8 -translate-x-1/2 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-100/50 text-5xl sm:text-6xl absolute right-12 top-1/2 -translate-y-1/2 rotate-6"></i>
+            <i class="fa-solid fa-paw text-sky-100/40 text-4xl sm:text-5xl absolute left-10 bottom-6 rotate-12"></i>
+            <i class="fa-solid fa-bone text-teal-200/40 text-5xl sm:text-6xl absolute left-1/3 top-12 -rotate-6"></i>
+            <i class="fa-solid fa-paw text-indigo-200/40 text-4xl sm:text-5xl absolute right-12 bottom-8 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute right-1/3 top-24 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-200/30 text-3xl sm:text-4xl absolute left-8 bottom-10 rotate-6"></i>
+            <i class="fa-solid fa-bone text-green-200/40 text-4xl sm:text-5xl absolute right-10 top-12 rotate-6"></i>
+            <i class="fa-solid fa-paw text-purple-200/40 text-4xl sm:text-5xl absolute left-14 top-1/3 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute left-1/4 bottom-8 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-teal-200/30 text-3xl sm:text-4xl absolute right-1/4 bottom-6 rotate-12"></i>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Nuestros Servicios</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <article class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden">
@@ -169,8 +221,25 @@
     </section>
 
     <!-- GALERÍA DE TRABAJO -->
-    <section id="gallery" class="py-14 md:py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" class="relative overflow-hidden py-14 md:py-20 bg-gray-50">
+        <div class="pointer-events-none absolute inset-0 z-0">
+            <i class="fa-solid fa-bone text-blue-200/50 text-5xl sm:text-6xl absolute left-6 bottom-12 rotate-6"></i>
+            <i class="fa-solid fa-paw text-sky-200/50 text-6xl sm:text-7xl absolute right-10 top-10 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-sky-200/40 text-4xl sm:text-5xl absolute left-20 top-14 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-blue-200/40 text-5xl sm:text-6xl absolute right-20 bottom-16 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-100/50 text-4xl sm:text-5xl absolute right-12 top-1/2 -translate-y-1/2 rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-100/50 text-5xl sm:text-6xl absolute left-1/2 top-8 -translate-x-1/2 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-100/40 text-4xl sm:text-5xl absolute left-10 bottom-6 rotate-6"></i>
+            <i class="fa-solid fa-paw text-indigo-200/40 text-5xl sm:text-6xl absolute left-1/3 bottom-10 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-teal-200/40 text-4xl sm:text-5xl absolute right-12 top-24 rotate-12"></i>
+            <i class="fa-solid fa-paw text-blue-200/30 text-3xl sm:text-4xl absolute right-1/3 bottom-6 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-200/30 text-3xl sm:text-4xl absolute left-8 top-24 rotate-6"></i>
+            <i class="fa-solid fa-paw text-green-200/40 text-4xl sm:text-5xl absolute left-12 top-10 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-purple-200/40 text-4xl sm:text-5xl absolute right-14 bottom-10 rotate-6"></i>
+            <i class="fa-solid fa-paw text-teal-200/30 text-3xl sm:text-4xl absolute left-1/4 bottom-8 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute right-1/4 top-10 -rotate-12"></i>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center text-blue-700">Galería de Trabajo</h2>
             <p class="text-center text-gray-600 text-base md:text-lg mb-8 md:mb-12">Imágenes y videos reales del trabajo de adiestramiento con clientes.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-8">
@@ -194,8 +263,21 @@
     </section>
 
     <!-- TESTIMONIOS -->
-    <section id="testimonials" class="py-14 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" class="relative overflow-hidden py-14 md:py-20 bg-white">
+        <div class="pointer-events-none absolute inset-0 z-0">
+            <i class="fa-solid fa-paw text-blue-200/50 text-5xl sm:text-6xl absolute left-8 top-8 -rotate-12"></i>
+            <i class="fa-solid fa-bone text-sky-200/50 text-6xl sm:text-7xl absolute right-8 bottom-10 rotate-6"></i>
+            <i class="fa-solid fa-paw text-sky-200/40 text-4xl sm:text-5xl absolute right-24 top-16 rotate-12"></i>
+            <i class="fa-solid fa-bone text-blue-200/40 text-5xl sm:text-6xl absolute left-24 bottom-16 -rotate-6"></i>
+            <i class="fa-solid fa-paw text-blue-100/50 text-4xl sm:text-5xl absolute left-1/2 top-8 -translate-x-1/2 rotate-6"></i>
+            <i class="fa-solid fa-bone text-sky-100/50 text-5xl sm:text-6xl absolute right-12 top-1/2 -translate-y-1/2 -rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-100/40 text-4xl sm:text-5xl absolute left-10 bottom-6 rotate-12"></i>
+            <i class="fa-solid fa-bone text-indigo-200/40 text-4xl sm:text-5xl absolute left-12 top-1/3 rotate-6"></i>
+            <i class="fa-solid fa-paw text-teal-200/40 text-5xl sm:text-6xl absolute right-18 top-20 -rotate-6"></i>
+            <i class="fa-solid fa-bone text-blue-200/30 text-3xl sm:text-4xl absolute right-1/4 bottom-10 rotate-12"></i>
+            <i class="fa-solid fa-paw text-sky-200/30 text-3xl sm:text-4xl absolute left-1/4 top-20 -rotate-12"></i>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-blue-700">Testimonios de Clientes</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <article class="bg-gray-50 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition overflow-hidden">
@@ -244,7 +326,7 @@
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-white py-8 md:py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h4 class="font-bold text-lg mb-4">EducaTuPerro</h4>
                     <p class="text-gray-400 text-sm md:text-base">Más de 20 años transformando vidas de perros y familias.</p>
@@ -260,10 +342,23 @@
                 </div>
                 <div class="sm:col-span-2 lg:col-span-1">
                     <h4 class="font-bold text-lg mb-4">Redes Sociales</h4>
-                    <div class="flex flex-wrap gap-4 text-gray-400">
-                        <a href="https://www.facebook.com/Guardscan" class="hover:text-sky-500" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="https://www.youtube.com/user/educatuperro" class="hover:text-sky-500" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <div class="flex flex-col gap-3 text-gray-400">
+                        <a href="https://www.facebook.com/Guardscan" class="inline-flex items-center gap-2 hover:text-sky-500" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook-f text-base"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.youtube.com/user/educatuperro" class="inline-flex items-center gap-2 hover:text-sky-500" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube text-base"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://www.instagram.com/guardscan_adiestramientocanino/" class="inline-flex items-center gap-2 hover:text-sky-500" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram text-base"></i>
+                            <span>Instagram</span>
+                        </a>
                     </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img src="img/Logo.jpeg" alt="Logo Guardscan" class="h-20 sm:h-24 md:h-28 w-auto object-contain transform scale-110">
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
